@@ -37,14 +37,14 @@ token = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefg'  # ENTER Y
 4.)  Run the Bot:
 
 ```bash
-python3 main.py
+python3 hashthemall.py
 ```
 
 
 
 # Usage
 
-After running the bot and adding it to your server ([Discord-Developer-Portal](https://discord.com/developers/applications)) you have to create a channel on your server that matches the name that you declared in "*main.py*". I also suggest to **enable the slow-mode in the channel's settings (10 sec.)** and **disable the welcome-message in the server-settings**, so that your backend doesn't get flooded.
+After running the bot and adding it to your server ([Discord-Developer-Portal](https://discord.com/developers/applications)) you have to create a channel on your server that matches the name that you declared in "*hashthemall.py*". I also suggest to **enable the slow-mode in the channel's settings (10 sec.)** and **disable the welcome-message in the server-settings**, so that your backend doesn't get flooded.
 
 After this is done, you can simply type a message in the channel you set and after a few seconds you'll get a direct-message with all calculated hashes.
 

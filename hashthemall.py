@@ -21,12 +21,6 @@ class HashThemAll_Bot(bot):
 
             text = message.content
 
-            messages = await message.author.history(limit=None, oldest_first=True).flatten()
-            if len(messages) > 0:
-                try:
-                    await messages[0].delete()
-                except discord.errors.Forbidden:
-                    print("[Error] You can't delete a message in a DM channel that is not your own!")
             await message.author.send("Calculating...")
 
             md4_hash = hashfunctions.calc_md4(text)
@@ -47,7 +41,7 @@ class HashThemAll_Bot(bot):
             bcrypt_hash = hashfunctions.calc_bcrypt(text, cost=15)
 
             messages = await message.author.history(limit=5, oldest_first=True).flatten()
-            await messages[0].delete()
+            
             await message.author.send(
                 "__**HashThemAll calculated the following hashes for your text:**__\n\"" + text + "\"\n"
                 + "\n**MD4:**\n" + md4_hash
