@@ -40,8 +40,6 @@ class HashThemAll_Bot(bot):
             whirlpool_hash = hashfunctions.calc_whirlpool(text)
             bcrypt_hash = hashfunctions.calc_bcrypt(text, cost=15)
 
-            messages = await message.author.history(limit=5, oldest_first=True).flatten()
-            
             await message.author.send(
                 "__**HashThemAll calculated the following hashes for your text:**__\n\"" + text + "\"\n"
                 + "\n**MD4:**\n" + md4_hash
